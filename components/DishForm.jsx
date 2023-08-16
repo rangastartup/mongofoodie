@@ -40,20 +40,29 @@ const DishForm = ({ formToggler, listSetter, dishObject }) => {
   const handleFileChange = async (file) => {
     console.log(file);
     try {
-      let s3Response = await uploadToS3(file);
-      setFormData((prev) => ({
-        ...prev,
-        image: s3Response.url,
-        awsKey: s3Response.key,
-      }));
+      let { url } = await uploadToS3(file);
+      // let s3Response = await uploadToS3(file);
+      // let s3Response = {url};
+      // setFormData((prev) => ({
+      //   ...prev,
+      //   image: s3Response.url,
+      //   awsKey: s3Response.key,
+        
+      // }));
       
+      console.log("Successfully uploaded to S3!", url);
+
 
       if (isEdit) {
         setIsNewImage(true);
       }
     } catch (error) {
       const s3error = error ;
+      // console.log("Successfully uploaded to S3!" + {url});
+
       console.log("S3" + s3error);
+      console.log("image url" + setFormData) ;
+   
       toast.error("Could not upload image");
     }
   };

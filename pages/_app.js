@@ -6,6 +6,9 @@ import { ToastContainer } from "react-toastify";
 import "../styles/globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
+let cors = require('cors');
+
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -22,5 +25,6 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
+// MyApp.use(cors());
 
 export default MyApp;
