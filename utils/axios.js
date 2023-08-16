@@ -3,7 +3,8 @@ import axios from "axios";
 const BASE_URL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://www.orderque.com";
+    : "https://main.d2y7w39bjeckg3.amplifyapp.com/";
+    //: "https://www.orderque.com";
 
 export default axios.create({
   baseURL: BASE_URL,

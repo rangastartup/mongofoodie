@@ -67,7 +67,8 @@ export async function getServerSideProps() {
   const api =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://www.orderque.com";
+      : "https://main.d2y7w39bjeckg3.amplifyapp.com/";
+    //  : "https://www.orderque.com";
   const response = await fetch(`${api}/api/home/restaurants`, {
     method: "GET",
     headers: { "Content-Type": "application/json" },

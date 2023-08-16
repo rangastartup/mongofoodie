@@ -26,6 +26,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-scripts": "^3.4.4",
     "react-toastify": "^9.0.8",
     "reactstrap": "^9.1.4",
     "stripe": "^10.12.0",
